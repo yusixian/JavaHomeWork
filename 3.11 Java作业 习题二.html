@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.11 Java作业 习题二</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+<li>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <p></p><div class="toc"><h3>目录</h3><ul><li><a href="#2_p30_1">习题2 p30</a></li><ul><li><a href="#1_2">1.问答题</a></li><li><a href="#3_25">3.阅读或调试程序</a></li><ul><li><a href="#1_26">（1）上机运行以下程序，注意观察输出结果</a></li><ul><li><a href="#_37">输出结果</a></li></ul><li><a href="#2SystemoutprintSystemoutprintln_39">（2）上机调试下列程序，注意System.out.print()和System.out.println()的区别</a></li><ul><li><a href="#_53">输出结果</a></li></ul><li><a href="#3_56">（3）上机调试下列程序，了解基本数据类型数据的取值范围</a></li><ul><li><a href="#_78">输出结果</a></li></ul><li><a href="#412_80">（4）下列程序标注的【代码1】和【代码2】的输出结果是什么</a></li><ul><li><a href="#_96">输出结果</a></li></ul><li><a href="#512_98">（5）下列程序标注的【代码1】和【代码2】的输出结果是什么</a></li><ul><li><a href="#_112">输出结果</a></li></ul></ul><li><a href="#4_116">4.编程题</a></li><ul><li><a href="#1Unicode_117">（1）编写一个应用程序，给出汉字“你”、“我”、“他”在Unicode表中的位置</a></li><ul><li><a href="#_129">输出结果</a></li></ul><li><a href="#2Java_131">（2）编写一个Java应用程序，输出全部的希腊字母</a></li><ul><li><a href="#_150">输出结果</a></li></ul></ul></ul></ul></div><p></p>
+<h1><a id="2_p30_1"></a>习题2 p30</h1>
+<h2><a id="1_2"></a>1.问答题</h2>
+<p>（1）标识符是用来标识类名、变量名、方法名、类型名、数组名及文件名的有效字符序列称为标识符。标识符是由字母、数字、下划线和美元符号（$）组成。第一个字符不能为数字，标识符也不能是关键字或者true或false或null。false不可作为标识符<br>
+（2）关键字是具有特定用途或被赋予特定意义的一些单词，是系统的保留字。true和false不是关键字。boolean、int、double、float、short、byte<br>
+（3）逻辑类型：boolean<br>
+整数类型：byte、short（短整型）、int（整型）、long（长整型）<br>
+字符类型：char<br>
+浮点类型：float（单精度实数）、double（双精度实数）<br>
+（4）<strong>float常量</strong>在表示时后面<strong>必须有</strong>后缀f或F，而<strong>double常量</strong>在表示时后面可以有后缀d或D，<strong>但允许省略该后缀</strong><br>
+（5）用length函数，如图所示<br>
+代码：</p>
+<pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> b <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"一维数组a的长度为"</span><span class="token operator">+</span>a<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"二维数组b中一维数组的个数为"</span><span class="token operator">+</span>b<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210311221611229.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2><a id="3_25"></a>3.阅读或调试程序</h2>
+<h3><a id="1_26"></a>（1）上机运行以下程序，注意观察输出结果</h3>
+<pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">20302</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">20322</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>该程序输出了Unicode字符码在20302到20322之间的字符</p>
+<h4><a id="_37"></a>输出结果</h4>
+<p><img src="https://img-blog.csdnimg.cn/20210311215806801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3><a id="2SystemoutprintSystemoutprintln_39"></a>（2）上机调试下列程序，注意System.out.print()和System.out.println()的区别</h3>
+<pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">234</span><span class="token punctuation">,</span>y <span class="token operator">=</span> <span class="token number">432</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>x <span class="token operator">+</span> <span class="token string">"&lt;"</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>x<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"我输出结果后不回车"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我输出结果后自动回车到下一行"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"x+y= "</span> <span class="token operator">+</span> <span class="token punctuation">(</span>x<span class="token operator">+</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>System.out.print()输出后不换行，System.out.println()输出后换行。</p>
+<h4><a id="_53"></a>输出结果</h4>
+<p><img src="https://img-blog.csdnimg.cn/20210311223346483.png" alt="在这里插入图片描述"></p>
+<h3><a id="3_56"></a>（3）上机调试下列程序，了解基本数据类型数据的取值范围</h3>
+<pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"byte取值范围："</span> <span class="token operator">+</span> Byte<span class="token punctuation">.</span>MIN_VALUE <span class="token operator">+</span> <span class="token string">"至"</span> <span class="token operator">+</span> Byte<span class="token punctuation">.</span>MAX_VALUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"short取值范围："</span> <span class="token operator">+</span> Short<span class="token punctuation">.</span>MIN_VALUE <span class="token operator">+</span> <span class="token string">"至"</span> <span class="token operator">+</span> Short<span class="token punctuation">.</span>MAX_VALUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"int取值范围："</span> <span class="token operator">+</span> Integer<span class="token punctuation">.</span>MIN_VALUE <span class="token operator">+</span> <span class="token string">"至"</span> <span class="token operator">+</span> Integer<span class="token punctuation">.</span>MAX_VALUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"long取值范围："</span> <span class="token operator">+</span> Long<span class="token punctuation">.</span>MIN_VALUE <span class="token operator">+</span> <span class="token string">"至"</span> <span class="token operator">+</span> Long<span class="token punctuation">.</span>MAX_VALUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"float取值范围："</span> <span class="token operator">+</span> Float<span class="token punctuation">.</span>MIN_VALUE <span class="token operator">+</span> <span class="token string">"至"</span> <span class="token operator">+</span> Float<span class="token punctuation">.</span>MAX_VALUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"double取值范围："</span> <span class="token operator">+</span> Double<span class="token punctuation">.</span>MIN_VALUE <span class="token operator">+</span> <span class="token string">"至"</span> <span class="token operator">+</span> Double<span class="token punctuation">.</span>MAX_VALUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>该程序输出各类型的取值范围<br>
+byte取值范围：-128至127<br>
+short取值范围：-32768至32767<br>
+int取值范围：-2147483648至2147483647<br>
+long取值范围：-9223372036854775808至9223372036854775807<br>
+float取值范围：1.4E-45至3.4028235E38<br>
+double取值范围：4.9E-324至1.7976931348623157E308</p>
+<h4><a id="_78"></a>输出结果</h4>
+<p><img src="https://img-blog.csdnimg.cn/20210311223310900.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1ODkwNTMz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3><a id="412_80"></a>（4）下列程序标注的【代码1】和【代码2】的输出结果是什么</h3>
+<pre><code class="prism language-java"><span class="token keyword">package</span> test<span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">long</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+		<span class="token keyword">long</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> b <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+		b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"数组b的长度："</span> <span class="token operator">+</span> b<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//【代码1】</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"b[0] = "</span> <span class="token operator">+</span> b<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//【代码2】</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>由于将a的引用赋给了b，所以b的长度实际是a的长度，而b[0]也即为a[0]<br>
+代码1输出 数组b的长度：4<br>
+代码2输出 b[0] = 1</p>
+<h4><a id="_96"></a>输出结果</h4>
+<p><img src="https://img-blog.csdnimg.cn/20210311224001134.png" alt="在这里插入图片描述"></p>
+<h3><a id="512_98"></a>（5）下列程序标注的【代码1】和【代码2】的输出结果是什么</h3>
+<pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">}</span><span class="token punctuation">,</span> b<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+		b<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> a<span class="token punctuation">;</span>
+		b<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> b<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>b<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//【代码1】</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>			<span class="token comment">//【代码2】</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>可见b[0]先是{1,2}，又被赋值为a的引用。则后一步操作即为将a[1]变为了7，故代码1输出为40，代码2输出为7</p>
+<h4><a id="_112"></a>输出结果</h4>
+<p><img src="https://img-blog.csdnimg.cn/20210311224601950.png" alt="在这里插入图片描述"></p>
+<h2><a id="4_116"></a>4.编程题</h2>
+<h3><a id="1Unicode_117"></a>（1）编写一个应用程序，给出汉字“你”、“我”、“他”在Unicode表中的位置</h3>
+<pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> ch <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'你'</span><span class="token punctuation">,</span> <span class="token string">'我'</span><span class="token punctuation">,</span> <span class="token string">'他'</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+		<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\'%c\'在Unicode表中的位置为：%d\n"</span><span class="token punctuation">,</span>ch<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>ch<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4><a id="_129"></a>输出结果</h4>
+<p><img src="https://img-blog.csdnimg.cn/20210311225412470.png" alt="在这里插入图片描述"></p>
+<h3><a id="2Java_131"></a>（2）编写一个Java应用程序，输出全部的希腊字母</h3>
+<p>查阅资料的得知<br>
+希腊字母（大小写各24个）：<br>
+大写：Α ~ Ω（对应Unicode码为：913 ~ 937，无930）<br>
+小写：α ~ ω（对应Unicode码为：945 ~ 969，无962）</p>
+<pre><code class="prism language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">913</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">937</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">945</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">969</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token punctuation">)</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4><a id="_150"></a>输出结果</h4>
+<p><img src="https://img-blog.csdnimg.cn/20210311230723359.png" alt="在这里插入图片描述"><br>
+?处为未定义字符</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
